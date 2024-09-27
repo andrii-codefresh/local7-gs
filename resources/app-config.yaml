@@ -1,0 +1,22 @@
+apiVersion: codefresh.io/v1beta1
+kind: PromotionTemplate
+metadata:
+  name: app-config
+  labels:
+    app: version-app
+spec:
+  applicationSourceSelector:
+#    matchExpressions:
+#      - key: environment
+#        operator: In
+#        values:
+#          - production
+    matchLabels:
+      app: version-app
+  priority: 10
+#  promotion:
+#    jsonPaths:
+#      - "/path/to/version"
+  versionSource:
+    file: "versionSource.json"
+    jsonPath: "$.parent.versionNumber"
