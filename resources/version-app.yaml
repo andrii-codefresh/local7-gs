@@ -4,6 +4,8 @@ metadata:
   name: version-app
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
+  annotations:
+    codefresh.io/product: version-product
   labels:
     app: version-app
     l2: label
