@@ -19,4 +19,4 @@ spec:
 #      - "/path/to/version"
   versionSource:
     file: "versionSource.json"
-    jsonPath: "$.parent.items[0].versionNumber"
+    jsonPath: "$.parent.many[?(@.name == \"second\")].versionNumber"
