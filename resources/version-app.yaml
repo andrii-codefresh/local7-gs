@@ -17,7 +17,7 @@ spec:
     repoURL: https://github.com/andrii-codefresh/argocd-example-apps1.git
     targetRevision: HEAD
   destination:
-    cluster: https://kubernetes.default.svc
+    server: https://kubernetes.default.svc
     namespace: gr
   syncPolicy:
     automated:
