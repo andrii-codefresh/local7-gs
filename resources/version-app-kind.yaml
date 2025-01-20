@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: version-app
+  name: version-app-kind
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
   annotations:
     codefresh.io/product: version-product
   labels:
-    app: version-app
+    app: version-app-kind
     l2: label
     l3: label3
 spec:
